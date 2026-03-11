@@ -62,7 +62,7 @@ const Hero = () => {
             </a>
 
             <a
-              href="https://github.com/oudomweb"
+              href="https://github.com/OudomK"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2"
@@ -75,7 +75,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-gray-400">
             <a href="tel:+85596208954" className="flex items-center gap-2 hover:text-blue-400 transition-colors">
               <Mail size={18} />
-              +855 96 208 9546
+               096 208 9546 | 097 985 8952
             </a>
             <span className="hidden sm:block">•</span>
             <a href="mailto:keooudom189@gmail.com" className="flex items-center gap-2 hover:text-blue-400 transition-colors">

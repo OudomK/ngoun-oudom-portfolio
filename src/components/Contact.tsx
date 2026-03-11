@@ -53,21 +53,21 @@ const Contact = () => {
     {
       icon: Github,
       label: 'GitHub',
-      href: 'https://github.com/oudomweb',
+      href: 'https://github.com/oudomweb?tab=repositories',
       color: 'hover:text-gray-400',
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      href: '#',
+      href: 'https://www.linkedin.com/in/oudom-ngoun-975585300/',
       color: 'hover:text-blue-400',
     },
-    {
-      icon: MessageCircle,
-      label: 'Telegram',
-      href: '#',
-      color: 'hover:text-cyan-400',
-    },
+   {
+    icon: MessageCircle,
+    label: 'Telegram',
+    href: 'https://t.me/oudom_dev',
+    color: 'hover:text-cyan-400',
+  },
   ];
 
   return (

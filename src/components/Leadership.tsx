@@ -18,7 +18,7 @@ const Leadership = () => {
     {
       title: 'Above & Beyond School',
       role: 'Backend Engineering Class - Project Team Leader',
-      period: '2024',
+      period: '2025',
       icon: Users,
       color: 'from-cyan-500 to-teal-500',
       description: [
@@ -41,6 +41,20 @@ const Leadership = () => {
       ],
       current: false,
     },
+    {
+    title: 'Spring Education Center',
+    role: 'Sub Leader – Marketing Intern',
+    period: '3 Months',
+    icon: Award,
+    color: 'from-green-500 to-teal-500',
+    description: [
+      'Supported the marketing team in planning and promoting educational programs',
+      'Assisted in coordinating marketing activities and campaigns',
+      'Collaborated with team members to improve outreach and student engagement',
+      'Helped manage tasks and communication as a sub leader within the internship team',
+    ],
+    current: false,
+  },
   ];
 
   return (
