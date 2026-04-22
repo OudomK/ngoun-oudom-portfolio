@@ -56,3 +56,24 @@
     animation: fade-in 1s ease-out;
   }
 }
+
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(160px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(160px) rotate(-360deg); }
+}
+
+.badge-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -18px;
+  margin-left: -40px;
+}
+
+.badge-orbit-1 { animation: orbit 9s linear infinite; animation-delay: 0s; }
+.badge-orbit-2 { animation: orbit 9s linear infinite; animation-delay: -1.28s; }
+.badge-orbit-3 { animation: orbit 9s linear infinite; animation-delay: -2.57s; }
+.badge-orbit-4 { animation: orbit 9s linear infinite; animation-delay: -3.85s; }
+.badge-orbit-5 { animation: orbit 9s linear infinite; animation-delay: -5.14s; }
+.badge-orbit-6 { animation: orbit 9s linear infinite; animation-delay: -6.42s; }
+.badge-orbit-7 { animation: orbit 9s linear infinite; animation-delay: -7.71s; }

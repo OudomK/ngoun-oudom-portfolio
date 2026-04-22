@@ -1,5 +1,6 @@
 import { ArrowDown, Github, Mail, ChevronRight, FileText, Phone } from 'lucide-react';
 import ProfilePic from '../image/oudom.png';
+import { SiReact, SiNextdotjs, SiNodedotjs, SiExpress, SiFastapi, SiNestjs, SiPostgresql  } from 'react-icons/si';
 const Hero = () => {
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -83,7 +84,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center text-gray-400 text-sm sm:text-base">
               <a href="tel:+855962089546" className="flex items-center gap-2 hover:text-blue-400 transition-colors">
                 <Phone size={16} /> {/* Swapped to Phone icon for the number */}
-                096 208 9546
+                096 208 9546 / 097 985 8952
               </a>
               <span className="hidden sm:block text-gray-600">•</span>
               <a href="mailto:keooudom189@gmail.com" className="flex items-center gap-2 hover:text-blue-400 transition-colors">
@@ -113,13 +114,47 @@ const Hero = () => {
                 />
               </div>
 
-              {/* Little floating tech badges (Optional but looks cool!) */}
-              <div className="absolute top-10 -left-6 bg-gray-800 border border-gray-700 p-3 rounded-xl shadow-lg z-20 animate-bounce" style={{ animationDuration: '3s' }}>
-                <span className="text-blue-400 font-bold">React</span>
+              {/* Orbiting Tech Badges */}
+              <div className="badge-orbit badge-orbit-1 bg-gray-800 border border-blue-500/50 px-3 py-2 rounded-xl shadow-lg z-20">
+                <span className="text-blue-400 font-bold text-sm whitespace-nowrap flex items-center gap-1">
+                  <SiReact className="w-4 h-4 text-blue-400" /> React
+                </span>
               </div>
-              <div className="absolute bottom-10 -right-4 bg-gray-800 border border-gray-700 p-3 rounded-xl shadow-lg z-20 animate-bounce" style={{ animationDuration: '4s' }}>
-                <span className="text-cyan-400 font-bold">Node.js</span>
+
+              <div className="badge-orbit badge-orbit-2 bg-gray-800 border border-gray-500/50 px-3 py-2 rounded-xl shadow-lg z-20">
+                <span className="text-gray-300 font-bold text-sm whitespace-nowrap flex items-center gap-1">
+                  <SiNextdotjs className="w-4 h-4 text-gray-300" /> Next.js
+                </span>
               </div>
+
+              <div className="badge-orbit badge-orbit-3 bg-gray-800 border border-green-500/50 px-3 py-2 rounded-xl shadow-lg z-20">
+                <span className="text-green-400 font-bold text-sm whitespace-nowrap flex items-center gap-1">
+                  <SiNodedotjs className="w-4 h-4 text-green-400" /> Node.js
+                </span>
+              </div>
+
+              <div className="badge-orbit badge-orbit-4 bg-gray-800 border border-yellow-500/50 px-3 py-2 rounded-xl shadow-lg z-20">
+                <span className="text-yellow-400 font-bold text-sm whitespace-nowrap flex items-center gap-1">
+                  <SiFastapi className="w-4 h-4 text-yellow-400" /> FastAPI
+                </span>
+              </div>
+
+              <div className="badge-orbit badge-orbit-5 bg-gray-800 border border-gray-400/50 px-3 py-2 rounded-xl shadow-lg z-20">
+                <span className="text-gray-300 font-bold text-sm whitespace-nowrap flex items-center gap-1">
+                  <SiExpress className="w-4 h-4 text-gray-300" /> Express
+                </span>
+              </div>
+
+              <div className="badge-orbit badge-orbit-6 bg-gray-800 border border-red-500/50 px-3 py-2 rounded-xl shadow-lg z-20">
+                <span className="text-red-400 font-bold text-sm whitespace-nowrap flex items-center gap-1">
+                  <SiNestjs className="w-4 h-4 text-red-400" /> Nest.js
+                </span>
+              </div>
+          <div className="badge-orbit badge-orbit-7 bg-gray-800 border border-blue-400/50 px-3 py-2 rounded-xl shadow-lg z-20">
+            <span className="text-blue-300 font-bold text-sm whitespace-nowrap flex items-center gap-1">
+              <SiPostgresql className="w-4 h-4 text-blue-300" /> PostgreSQL
+            </span>
+          </div>
             </div>
           </div>
 

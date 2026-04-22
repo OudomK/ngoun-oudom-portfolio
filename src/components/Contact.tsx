@@ -44,7 +44,7 @@ const Contact = () => {
     {
       icon: Phone,
       label: 'Phone',
-      value: '+855 96 208 9546',
+      value: '096 208 9546 / 097 985 8952',
       href: 'tel:+85596208954',
     },
   ];
