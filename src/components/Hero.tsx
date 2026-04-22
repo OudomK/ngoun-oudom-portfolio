@@ -1,6 +1,7 @@
 import { ArrowDown, Github, Mail, ChevronRight, FileText, Phone } from 'lucide-react';
 import ProfilePic from '../image/oudom.png';
 import { SiReact, SiNextdotjs, SiNodedotjs, SiExpress, SiFastapi, SiNestjs, SiPostgresql  } from 'react-icons/si';
+import CVfile from '../image/Oudom_Ngoun_CV.pdf';
 const Hero = () => {
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -61,7 +62,7 @@ const Hero = () => {
               </a>
 
               <a
-                href="/Oudom_Ngoun_CV.pdf" 
+                href={CVfile}
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-gray-800 hover:bg-gray-700 border border-gray-600 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 text-white"
