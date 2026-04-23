@@ -9,6 +9,7 @@ import Achievements from './components/Achievements';
 import Contact from './components/Contact';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import Certificates from './components/Certificates';
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -30,6 +31,7 @@ function App() {
       <Skills />
       <Experience />
       <Projects />
+      <Certificates/>
       <Leadership />
       <Achievements />
       <Contact />

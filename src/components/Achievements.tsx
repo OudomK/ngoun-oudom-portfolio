@@ -1,4 +1,6 @@
-import { Trophy, Lightbulb, Users, Target } from 'lucide-react';
+import { Trophy, Lightbulb, Users, Target, ExternalLink } from 'lucide-react';
+import Apsara from '../image/odc.jpg';
+import ApsaraLogo from '../image/odc.png'; // rename your logo file to apsara.png
 
 const Achievements = () => {
   return (
@@ -24,15 +26,35 @@ const Achievements = () => {
         <div className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm p-8 md:p-10 rounded-2xl border border-gray-700 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20">
             <div className="flex items-start gap-6 mb-6">
-              <div className="p-4 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl">
-                <Trophy size={32} className="text-white" />
+
+              {/* Logo */}
+              <div className="w-16 h-16 rounded-xl overflow-hidden bg-white p-1.5 shadow-md flex-shrink-0 flex items-center justify-center">
+                <img
+                  src={ApsaraLogo}
+                  alt="ApsaraAI"
+                  className="w-full h-full object-contain rounded-lg"
+                />
               </div>
+
               <div className="flex-1">
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
                   ApsaraAI – AI for Gender Inclusion Ideathon
                 </h3>
                 <p className="text-blue-400 font-semibold text-lg mb-2">Participant</p>
-                <p className="text-gray-400 text-sm mb-4">October 2025</p>
+
+                {/* Date + Certificate button */}
+                <div className="flex items-center gap-3">
+                  <p className="text-gray-400 text-sm">October 2025</p>
+                  <a
+                    href={Apsara}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 px-2.5 py-1 bg-blue-500/15 hover:bg-blue-500/30 border border-blue-500/30 hover:border-blue-500/60 rounded-full text-blue-400 hover:text-blue-300 text-xs font-medium transition-all duration-200"
+                  >
+                    <ExternalLink size={11} />
+                    Certificate
+                  </a>
+                </div>
               </div>
             </div>
 
