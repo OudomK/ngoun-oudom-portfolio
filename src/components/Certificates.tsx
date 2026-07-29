@@ -6,6 +6,9 @@ import C from '../image/c++.jpg';
 import Frontend from '../image/frontend.jpg';
 import Backend from '../image/backend.jpg';
 import BackendEngineer from '../image/anb.jpg';
+import IntroCyber from '../image/Introduction_to_Cybersecurity_certificate_keooudom189-gmail-com_c544ade2-8ba6-440c-897f-5708fe51192d.pdf';
+import CyberEssentials from '../image/certificate-completion.pdf';
+import CiscoLogo from '../image/cisco.png';
 
 const Certificates = () => {
   // Short courses (typically brief, focused certifications)
@@ -63,6 +66,30 @@ const Certificates = () => {
       glowColor: 'hover:shadow-cyan-500/10',
       borderHover: 'hover:border-cyan-500/50',
       file: BackendEngineer,
+    },
+  ];
+
+  // Networking & Cybersecurity
+  const cybersecurityCourses = [
+    {
+      title: 'Introduction to Cybersecurity',
+      logo: CiscoLogo,
+      issuer: 'Cisco Networking Academy (Norton University)',
+      description: 'Completed in June 2026',
+      color: 'from-green-500 to-emerald-500',
+      glowColor: 'hover:shadow-green-500/10',
+      borderHover: 'hover:border-green-500/50',
+      file: IntroCyber,
+    },
+    {
+      title: 'Cybersecurity Essentials',
+      logo: CiscoLogo,
+      issuer: 'Cisco Networking Academy (Norton University)',
+      description: 'Completed in 2026',
+      color: 'from-emerald-500 to-teal-500',
+      glowColor: 'hover:shadow-emerald-500/10',
+      borderHover: 'hover:border-emerald-500/50',
+      file: CyberEssentials,
     },
   ];
 
@@ -139,6 +166,46 @@ const Certificates = () => {
                   <img src={course.logo} alt={course.issuer} className="w-full h-full object-cover rounded-xl" />
                 ) : (
                   <span className="text-white font-bold text-xs leading-none text-center px-1">S</span>
+                )}
+              </div>
+              <h3 className="text-xl font-bold text-white mb-1">{course.title}</h3>
+              <p className="text-blue-400 font-semibold text-sm mb-1">{course.issuer}</p>
+              <p className="text-gray-500 text-sm mb-6">{course.description}</p>
+              <a
+                href={course.file}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`mt-auto flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r ${course.color} rounded-xl text-white text-sm font-semibold hover:opacity-90 hover:shadow-lg transition-all duration-200`}
+              >
+                <ExternalLink size={16} />
+                View Certificate
+              </a>
+            </div>
+          ))}
+        </div>
+
+        {/* Networking & Cybersecurity Section */}
+        <div className="text-center mb-16 mt-20">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+              Networking & Cybersecurity
+            </span>
+          </h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-green-400 to-emerald-400 mx-auto rounded-full"></div>
+          <p className="text-gray-400 mt-4 text-lg">Cisco Networking Academy certifications</p>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {cybersecurityCourses.map((course, index) => (
+            <div
+              key={index}
+              className={`group bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm p-6 rounded-2xl border border-gray-700 ${course.borderHover} transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${course.glowColor} flex flex-col`}
+            >
+              <div className={`w-14 h-14 bg-gradient-to-br ${course.color} rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg overflow-hidden`}
+                >
+                {course.logo ? (
+                  <img src={course.logo} alt={course.issuer} className="w-full h-full object-cover rounded-xl" />
+                ) : (
+                  <span className="text-white font-bold text-xs leading-none text-center px-1">NC</span>
                 )}
               </div>
               <h3 className="text-xl font-bold text-white mb-1">{course.title}</h3>
