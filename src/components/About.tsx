@@ -2,11 +2,11 @@ import { GraduationCap, BookOpen } from 'lucide-react';
 
 const About = () => {
   const courses = [
-    'Data Analytics',
-    'Networking',
-    'UX/UI Design',
-    'Mobile Full-Stack Development',
+    'Software Develop',
     'Web Full-Stack Development',
+    'System Analytic',
+    'Data Analytic',
+    'Design UX/UI',
   ];
 
   return (

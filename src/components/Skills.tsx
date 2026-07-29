@@ -328,7 +328,7 @@ import {
   SiMongodb, SiPostgresql, SiMysql,
   SiDocker, SiGit, SiGithub, SiGitlab, SiPostman, SiFlutter, SiCplusplus,
   SiVercel, SiNetlify, SiRailway, SiRender, SiCloudflare,
-  SiHostinger, SiGithubactions, 
+  SiHostinger, SiGithubactions, SiNotion, SiSupabase,
 } from 'react-icons/si';
 import { FaJava, FaCss3Alt, FaDatabase, FaMicrosoft, FaAws } from 'react-icons/fa';
 import { VscVscode } from 'react-icons/vsc';
@@ -347,7 +347,8 @@ const Skills = () => {
         { name: 'React.js', icon: SiReact, color: 'text-blue-400' },
         { name: 'Next.js', icon: SiNextdotjs, color: 'text-gray-300' },
         { name: 'Figma', icon: SiFigma, color: 'text-purple-400' },
-         { name: 'Flutter', icon: SiFlutter, color: 'text-cyan-400' },
+        { name: 'Shadcn/ui', icon: SiReact, color: 'text-gray-300' },
+        { name: 'Flutter', icon: SiFlutter, color: 'text-cyan-400' },
       ],
     },
     {
@@ -360,10 +361,7 @@ const Skills = () => {
         { name: 'NestJS', icon: SiNestjs, color: 'text-red-400' },
         { name: 'FastAPI', icon: SiFastapi, color: 'text-teal-400' },
         { name: 'Laravel', icon: SiLaravel, color: 'text-red-500' },
-        { name: 'PHP', icon: SiPhp, color: 'text-indigo-400' },
         { name: 'Python', icon: SiPython, color: 'text-yellow-400' },
-        { name: 'Java', icon: FaJava, color: 'text-orange-400' },
-        { name: 'C++', icon: SiCplusplus, color: 'text-blue-400' },
       ],
     },
     {
@@ -375,6 +373,7 @@ const Skills = () => {
         { name: 'PostgreSQL', icon: SiPostgresql, color: 'text-blue-400' },
         { name: 'MySQL', icon: SiMysql, color: 'text-orange-400' },
         { name: 'SQL Server', icon: FaDatabase, color: 'text-red-400' },
+        { name: 'Supabase', icon: SiSupabase, color: 'text-emerald-400' },
       ],
     },
     {
@@ -389,6 +388,10 @@ const Skills = () => {
         { name: 'VS Code', icon: VscVscode, color: 'text-blue-500' },
         { name: 'PowerBI', icon: FaMicrosoft, color: 'text-yellow-500' },
         { name: 'FigJam', icon: SiFigma, color: 'text-orange-400' },
+        { name: 'Notion', icon: SiNotion, color: 'text-gray-300' },
+        { name: 'Scrum Ceremony', icon: Users, color: 'text-blue-400' },
+        { name: 'Sprint Planning', icon: Users, color: 'text-cyan-400' },
+        { name: 'Sprint Review', icon: Users, color: 'text-purple-400' },
       ],
     },
     {
@@ -402,7 +405,6 @@ const Skills = () => {
         { name: 'Render', icon: SiRender, color: 'text-green-400' },
         { name: 'AWS', icon: FaAws, color: 'text-orange-400' },
         { name: 'Cloudflare', icon: SiCloudflare, color: 'text-orange-500' },
-        { name: 'Hostinger', icon: SiHostinger, color: 'text-purple-500' },
       ],
     },
     {

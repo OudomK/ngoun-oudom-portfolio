@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ExternalLink, Code2, Palette, ShoppingBag, Building2, Plane, GraduationCap, Coffee, MonitorPlay } from 'lucide-react';
+import { ExternalLink, Code2, Palette, ShoppingBag, Building2, GraduationCap, MonitorPlay } from 'lucide-react';
 import School from '../image/school.png';
 import Cafe from '../image/cafe.png';
 import Gas from '../image/pertonas.png';
@@ -14,17 +14,36 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'Cafe POS + Ordering System',
-      description: 'SaaS platform designed for cafes to manage orders, track inventory, and handle point-of-sale transactions smoothly.',
-      category: 'System',
-      tech: ['React.js', 'Node.js', 'PostgreSQL', 'Tailwind CSS'],
-      icon: Coffee,
-      color: 'from-orange-500 to-yellow-500',
-      logo: Cafe, // Just drop cafe-logo.png in public/image/
-      demo: '#',
+      title: "AI Women's Health Assistant",
+      description: 'Full-Stack Project focusing on providing AI-driven health assistance and recommendations for women.',
+      category: 'Web/App',
+      tech: ['React.js', 'Node.js', 'PostgreSQL', 'AI Integration'],
+      icon: Code2,
+      color: 'from-pink-500 to-rose-500',
+      logo: Ai,
     },
     {
-      title: 'Online School Web/App',
+      title: 'Carresync',
+      description: 'Education platform connecting students with mentors. Built as a capstone full-stack project.',
+      category: 'Web/App',
+      tech: ['React.js', 'Node.js', 'PostgreSQL', 'REST APIs'],
+      icon: GraduationCap,
+      color: 'from-purple-500 to-indigo-500',
+      logo: Careerse,
+      demo: 'https://ptascloud.online/',
+    },
+    {
+      title: 'Gas Station System',
+      description: 'Full-stack team project for managing fuel sales and station operations with real-time data tracking and reporting.',
+      category: 'System',
+      tech: ['React.js', 'Express.js', 'REST APIs', 'PostgreSQL'],
+      icon: Building2,
+      color: 'from-blue-500 to-cyan-500',
+      logo: Gas,
+      demo: 'https://petronas-cambodia.up.railway.app/login',
+    },
+    {
+      title: 'Online School Management',
       description: 'Comprehensive digital learning platform for managing classes, students, and digital learning resources efficiently.',
       category: 'Web/App',
       tech: ['React.js', 'Express.js', 'MongoDB'],
@@ -32,16 +51,6 @@ const Projects = () => {
       color: 'from-green-500 to-emerald-500',
       logo: School,
       demo: 'https://online-school.coredev.online/login',
-    },
-    {
-      title: 'Gas Station System',
-      description: 'Full-stack system for managing fuel sales and station operations with real-time data tracking and reporting.',
-      category: 'System',
-      tech: ['React.js', 'Express.js', 'REST APIs', 'PostgreSQL'],
-      icon: Building2,
-      color: 'from-blue-500 to-cyan-500',
-      logo: Gas,
-      demo: 'https://petronas-cambodia.up.railway.app/login',
     },
     {
       title: 'ZaRoFashion',
@@ -63,35 +72,6 @@ const Projects = () => {
       color: 'from-teal-500 to-green-500',
       logo: Food,
       demo: 'https://www.figma.com/design/888fczHP6UEqfGUzaxeFO1/Untitled?node-id=0-1&t=ZTxKexX9GQ77WMAQ-1',
-    },
-    {
-      title: 'Hospital Management System',
-      description: 'Comprehensive healthcare management system with frontend interface, API integration with backend, and thorough API testing.',
-      category: 'System',
-      tech: ['React.js', 'REST APIs', 'Postman'],
-      icon: Code2,
-      color: 'from-purple-500 to-blue-500',
-      logo: Ai,
-    },
-    {
-      title: 'CareerSync',
-      description: 'Education platform connecting students with mentors. Email: oudomngoun29@gmail.com | Pass: 12345678',
-      category: 'Web/App',
-      tech: ['React.js', 'Node.js', 'PostgreSQL', 'REST APIs'],
-      icon: GraduationCap,
-      color: 'from-purple-500 to-indigo-500',
-      logo: Careerse,
-      demo: 'https://ptascloud.online/',
-    },
-    {
-      title: 'Khmer New Year',
-      description: 'An interactive web experience celebrating Khmer New Year with cultural traditions, festive visuals, and engaging content for users to explore.',
-      category: 'Web/App',
-      tech: ['React.js', 'Node.js', 'PostgreSQL', 'REST APIs'],
-      icon: GraduationCap,
-      color: 'from-yellow-500 to-orange-500',
-      logo: '',
-      demo: 'https://khmer-new-year-two.vercel.app/',
     },
   ];
 

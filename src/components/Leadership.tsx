@@ -159,6 +159,7 @@ import NortonLogo from '../image/norton.png';
 import AboveBeyondLogo from '../image/anb.png';
 import MaxwellLogo from '../image/puc.png';
 import SpringLogo from '../image/spring.png';
+import PucLogo from '../image/puc.png';
 import Maxwell from '../image/maxwell.jpg';
 import SpringEdu from '../image/spring.jpg';
 const Leadership = () => {
@@ -166,12 +167,12 @@ const Leadership = () => {
     {
       title: 'Norton University',
       role: 'Class Monitor',
-      period: 'Jan 2024 – Present',
+      period: 'Jan 2024 - June 2026',
       icon: Users,
       color: 'from-blue-500 to-cyan-500',
       brandColor: '#1D4ED8',
       logo: NortonLogo,
-      current: true,
+      current: false,
       certificate: null,
       description: [
         'Coordinated communication between lecturers and students',
@@ -180,9 +181,25 @@ const Leadership = () => {
       ],
     },
     {
+      title: 'The Art of Leadership in Generation Z Event',
+      role: 'Participant',
+      period: 'May - July 2026',
+      icon: Users,
+      color: 'from-purple-500 to-indigo-500',
+      brandColor: '#6366F1',
+      logo: PucLogo,
+      current: false,
+      certificate: null,
+      description: [
+        'Engaged in leadership development activities tailored for Generation Z',
+        'Participated in workshops and seminars focused on modern leadership skills',
+        'Built a network with emerging young leaders',
+      ],
+    },
+    {
       title: 'Above & Beyond School',
-      role: 'Backend Engineering Class - Project Team Leader',
-      period: '2025',
+      role: 'Backend Engineering class - project main leader',
+      period: 'Sept - Dec 2025',
       icon: Users,
       color: 'from-cyan-500 to-teal-500',
       brandColor: '#0891B2',
@@ -197,14 +214,14 @@ const Leadership = () => {
     },
     {
       title: 'Maxwell Leadership',
-      role: 'Event IT Support',
+      role: 'Preparing Event / IT Support',
       period: 'Nov 2024',
       icon: Award,
       color: 'from-teal-500 to-blue-500',
       brandColor: '#0D9488',
       logo: MaxwellLogo,
       current: false,
-      certificate: Maxwell, // Update with your actual filename
+      certificate: Maxwell,
       description: [
         'Provided IT support for leadership events',
         'Assisted with presentations and equipment setup',
@@ -220,7 +237,7 @@ const Leadership = () => {
       brandColor: '#16A34A',
       logo: SpringLogo,
       current: false,
-      certificate: SpringEdu, // Update with your actual filename
+      certificate: SpringEdu,
       description: [
         'Supported the marketing team in planning and promoting educational programs',
         'Assisted in coordinating marketing activities and campaigns',

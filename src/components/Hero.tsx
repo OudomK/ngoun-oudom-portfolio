@@ -1,6 +1,5 @@
 import { ArrowDown, Github, Mail, ChevronRight, FileText, Phone } from 'lucide-react';
 import ProfilePic from '../image/oudom.png';
-import { SiReact, SiNextdotjs, SiNodedotjs, SiExpress, SiFastapi, SiNestjs, SiPostgresql  } from 'react-icons/si';
 import CVfile from '../image/Oudom_Ngoun_CV.pdf';
 const Hero = () => {
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -97,65 +96,17 @@ const Hero = () => {
 
           {/* PROFILE IMAGE (Right Side) */}
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end animate-fade-in-up">
-            <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96">
-              {/* Glowing border effect behind the image */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-blue-500 to-cyan-400 rounded-full blur-xl opacity-20 animate-pulse"></div>
-              
-              {/* The actual image container */}
-              <div className="relative w-full h-full rounded-full border-4 border-gray-800 overflow-hidden shadow-2xl bg-gray-900 z-10">
-                <img 
-                  src={ProfilePic} // Put your photo in the public folder and name it profile.jpg
-                  alt="Oudom Ngoun" 
-                  className="w-full h-full object-cover object-top"
-                  // Fallback if image is missing
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none';
-                    e.currentTarget.parentElement!.innerHTML = '<div class="w-full h-full flex items-center justify-center text-gray-500 bg-gray-800 text-2xl font-bold">ON</div>';
-                  }}
-                />
-              </div>
-
-              {/* Orbiting Tech Badges */}
-              <div className="badge-orbit badge-orbit-1 bg-gray-800 border border-blue-500/50 px-3 py-2 rounded-xl shadow-lg z-20">
-                <span className="text-blue-400 font-bold text-sm whitespace-nowrap flex items-center gap-1">
-                  <SiReact className="w-4 h-4 text-blue-400" /> React
-                </span>
-              </div>
-
-              <div className="badge-orbit badge-orbit-2 bg-gray-800 border border-gray-500/50 px-3 py-2 rounded-xl shadow-lg z-20">
-                <span className="text-gray-300 font-bold text-sm whitespace-nowrap flex items-center gap-1">
-                  <SiNextdotjs className="w-4 h-4 text-gray-300" /> Next.js
-                </span>
-              </div>
-
-              <div className="badge-orbit badge-orbit-3 bg-gray-800 border border-green-500/50 px-3 py-2 rounded-xl shadow-lg z-20">
-                <span className="text-green-400 font-bold text-sm whitespace-nowrap flex items-center gap-1">
-                  <SiNodedotjs className="w-4 h-4 text-green-400" /> Node.js
-                </span>
-              </div>
-
-              <div className="badge-orbit badge-orbit-4 bg-gray-800 border border-yellow-500/50 px-3 py-2 rounded-xl shadow-lg z-20">
-                <span className="text-yellow-400 font-bold text-sm whitespace-nowrap flex items-center gap-1">
-                  <SiFastapi className="w-4 h-4 text-yellow-400" /> FastAPI
-                </span>
-              </div>
-
-              <div className="badge-orbit badge-orbit-5 bg-gray-800 border border-gray-400/50 px-3 py-2 rounded-xl shadow-lg z-20">
-                <span className="text-gray-300 font-bold text-sm whitespace-nowrap flex items-center gap-1">
-                  <SiExpress className="w-4 h-4 text-gray-300" /> Express
-                </span>
-              </div>
-
-              <div className="badge-orbit badge-orbit-6 bg-gray-800 border border-red-500/50 px-3 py-2 rounded-xl shadow-lg z-20">
-                <span className="text-red-400 font-bold text-sm whitespace-nowrap flex items-center gap-1">
-                  <SiNestjs className="w-4 h-4 text-red-400" /> Nest.js
-                </span>
-              </div>
-          <div className="badge-orbit badge-orbit-7 bg-gray-800 border border-blue-400/50 px-3 py-2 rounded-xl shadow-lg z-20">
-            <span className="text-blue-300 font-bold text-sm whitespace-nowrap flex items-center gap-1">
-              <SiPostgresql className="w-4 h-4 text-blue-300" /> PostgreSQL
-            </span>
-          </div>
+            <div className="relative w-64 sm:w-80 md:w-96 z-10">
+              <img 
+                src={ProfilePic}
+                alt="Oudom Ngoun" 
+                className="w-full h-auto"
+                // Fallback if image is missing
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                  e.currentTarget.parentElement!.innerHTML = '<div class="w-full h-64 flex items-center justify-center text-gray-500 bg-gray-800 text-2xl font-bold">ON</div>';
+                }}
+              />
             </div>
           </div>
 

@@ -1,52 +1,21 @@
 import { Calendar, MapPin } from 'lucide-react';
-import PetronasLogo from '../image/pertonas.png';
-import ITsroksrea from '../image/cafe.png';
-import KiloITLogo from '../image/kiloit.png';
+import ItsRokSrea from '../image/itsroksrea.png';
+
 const Experience = () => {
   const experiences = [
     {
-      title: 'Petronas',
-      role: 'Full Stack Team Project',
-      period: 'May 2025 – Present',
-      location: 'Remote',
-      brandColor: '#00A19C',
-      logo: PetronasLogo,
-      current: false,
-      description: [
-        'Developed frontend using React.js with modern UI components',
-        'Integrated APIs with Express.js backend for seamless data flow',
-        'Coordinated with backend developers for system communication',
-        'Planned development phases using Waterfall methodology',
-      ],
-    },
-    {
-      title: 'IT Sroksrea',
-      role: 'Full Stack Web System',
-      period: 'March 2024 – Present',
-      location: 'Remote',
+      title: 'Freelance Full-Stack Developer',
+      role: 'Project Manager & Developer',
+      period: 'Nov 2024 - June 2026',
+      location: 'Phnom Penh',
       brandColor: '#3B82F6',
-      logo: ITsroksrea,
+      logo: ItsRokSrea,
       current: false,
       description: [
-        'Translated business requirements into technical system specifications',
-        'Collaborated with frontend teams to integrate backend data',
-        'Performed data analysis for project planning and optimization',
-        'Supported development workflows and requirement analysis',
-      ],
-    },
-    {
-      title: 'KiloIT',
-      role: 'Frontend Development Training',
-      period: 'June 2024 – December 2024',
-      location: 'Training Program',
-      brandColor: '#8B5CF6',
-      logo: KiloITLogo,
-      current: false,
-      description: [
-        'Built Personal Portfolio Website with responsive design',
-        'Developed Hospital Management Website with complex features',
-        'Created Travel & Hotel Booking Website with booking flow',
-        'Learned: HTML, CSS, JavaScript, React, Git, API integration, SDLC',
+        'Architected and developed scalable web applications, writing clean, maintainable code for both dynamic frontend interfaces and robust backend APIs.',
+        'Managed and developed various IT projects as a freelancer from the initial phase through to completion.',
+        'Planned and managed projects utilizing Agile methodologies, including maintaining Scrum notes, facilitating Sprint Ceremonies, and tracking progress on a Kanban Board.',
+        'Collaborated with teams and managed project codebases using Gitflow strategy to ensure system stability and efficiency.',
       ],
     },
   ];

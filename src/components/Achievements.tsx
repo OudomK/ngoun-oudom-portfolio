@@ -3,6 +3,23 @@ import Apsara from '../image/odc.jpg';
 import ApsaraLogo from '../image/odc.png'; // rename your logo file to apsara.png
 
 const Achievements = () => {
+  const achievementsList = [
+    {
+      title: 'ApsaraAI – AI for Gender Inclusion Ideathon',
+      role: 'Participant',
+      period: 'October 2025',
+      logo: ApsaraLogo,
+      certificate: Apsara,
+      focus: 'Education & Skills Development – Empowering Women in STEM',
+      activities: [
+        'Worked with mentors and teams to develop AI-based solutions addressing gender inclusion challenges',
+        'Presented project ideas and research findings to judges and stakeholders',
+        'Collaborated with diverse teams to explore innovative applications of AI in education',
+      ],
+      impact: 'Contributed to developing solutions aimed at reducing gender disparities in STEM fields and promoting equal opportunities for women in technology and education.'
+    }
+  ];
+
   return (
     <section id="achievements" className="py-20 bg-gradient-to-b from-gray-900 to-gray-800 relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
@@ -23,90 +40,88 @@ const Achievements = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm p-8 md:p-10 rounded-2xl border border-gray-700 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20">
-            <div className="flex items-start gap-6 mb-6">
+        <div className="max-w-4xl mx-auto space-y-8">
+          {achievementsList.map((achievement, index) => (
+            <div key={index} className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm p-8 md:p-10 rounded-2xl border border-gray-700 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20">
+              <div className="flex items-start gap-6 mb-6">
 
-              {/* Logo */}
-              <div className="w-16 h-16 rounded-xl overflow-hidden bg-white p-1.5 shadow-md flex-shrink-0 flex items-center justify-center">
-                <img
-                  src={ApsaraLogo}
-                  alt="ApsaraAI"
-                  className="w-full h-full object-contain rounded-lg"
-                />
+                {/* Logo */}
+                <div className="w-16 h-16 rounded-xl overflow-hidden bg-white p-1.5 shadow-md flex-shrink-0 flex items-center justify-center">
+                  {achievement.logo ? (
+                    <img
+                      src={achievement.logo}
+                      alt={achievement.title}
+                      className="w-full h-full object-contain rounded-lg"
+                    />
+                  ) : (
+                    <span className="text-blue-500 font-bold text-xl">L</span>
+                  )}
+                </div>
+
+                <div className="flex-1">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                    {achievement.title}
+                  </h3>
+                  <p className="text-blue-400 font-semibold text-lg mb-2">{achievement.role}</p>
+
+                  {/* Date + Certificate button */}
+                  <div className="flex items-center gap-3">
+                    <p className="text-gray-400 text-sm">{achievement.period}</p>
+                    {achievement.certificate && (
+                      <a
+                        href={achievement.certificate}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1 px-2.5 py-1 bg-blue-500/15 hover:bg-blue-500/30 border border-blue-500/30 hover:border-blue-500/60 rounded-full text-blue-400 hover:text-blue-300 text-xs font-medium transition-all duration-200"
+                      >
+                        <ExternalLink size={11} />
+                        Certificate
+                      </a>
+                    )}
+                  </div>
+                </div>
               </div>
 
-              <div className="flex-1">
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
-                  ApsaraAI – AI for Gender Inclusion Ideathon
-                </h3>
-                <p className="text-blue-400 font-semibold text-lg mb-2">Participant</p>
+              <div className="space-y-6">
+                <div className="bg-gray-700/30 p-6 rounded-xl border border-gray-600">
+                  <div className="flex items-center gap-3 mb-3">
+                    <Target size={20} className="text-cyan-400" />
+                    <h4 className="text-lg font-semibold text-white">Focus Area</h4>
+                  </div>
+                  <p className="text-gray-300 leading-relaxed">
+                    {achievement.focus}
+                  </p>
+                </div>
 
-                {/* Date + Certificate button */}
-                <div className="flex items-center gap-3">
-                  <p className="text-gray-400 text-sm">October 2025</p>
-                  <a
-                    href={Apsara}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1 px-2.5 py-1 bg-blue-500/15 hover:bg-blue-500/30 border border-blue-500/30 hover:border-blue-500/60 rounded-full text-blue-400 hover:text-blue-300 text-xs font-medium transition-all duration-200"
-                  >
-                    <ExternalLink size={11} />
-                    Certificate
-                  </a>
+                <div className="bg-gray-700/30 p-6 rounded-xl border border-gray-600">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Lightbulb size={20} className="text-cyan-400" />
+                    <h4 className="text-lg font-semibold text-white">Key Activities</h4>
+                  </div>
+                  <ul className="space-y-3">
+                    {achievement.activities.map((act, i) => (
+                      <li key={i} className="flex items-start gap-3 text-gray-300">
+                        <span className="text-cyan-400 mt-1 flex-shrink-0">•</span>
+                        <span className="leading-relaxed">
+                          {act}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="bg-gray-700/30 p-6 rounded-xl border border-gray-600">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Users size={20} className="text-cyan-400" />
+                    <h4 className="text-lg font-semibold text-white">Impact</h4>
+                  </div>
+                  <p className="text-gray-300 leading-relaxed">
+                    {achievement.impact}
+                  </p>
                 </div>
               </div>
             </div>
-
-            <div className="space-y-6">
-              <div className="bg-gray-700/30 p-6 rounded-xl border border-gray-600">
-                <div className="flex items-center gap-3 mb-3">
-                  <Target size={20} className="text-cyan-400" />
-                  <h4 className="text-lg font-semibold text-white">Focus Area</h4>
-                </div>
-                <p className="text-gray-300 leading-relaxed">
-                  <span className="text-blue-400 font-semibold">Education & Skills Development</span> – Empowering Women in STEM
-                </p>
-              </div>
-
-              <div className="bg-gray-700/30 p-6 rounded-xl border border-gray-600">
-                <div className="flex items-center gap-3 mb-4">
-                  <Lightbulb size={20} className="text-cyan-400" />
-                  <h4 className="text-lg font-semibold text-white">Key Activities</h4>
-                </div>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3 text-gray-300">
-                    <span className="text-cyan-400 mt-1 flex-shrink-0">•</span>
-                    <span className="leading-relaxed">
-                      Worked with mentors and teams to develop AI-based solutions addressing gender inclusion challenges
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3 text-gray-300">
-                    <span className="text-cyan-400 mt-1 flex-shrink-0">•</span>
-                    <span className="leading-relaxed">
-                      Presented project ideas and research findings to judges and stakeholders
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3 text-gray-300">
-                    <span className="text-cyan-400 mt-1 flex-shrink-0">•</span>
-                    <span className="leading-relaxed">
-                      Collaborated with diverse teams to explore innovative applications of AI in education
-                    </span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-gray-700/30 p-6 rounded-xl border border-gray-600">
-                <div className="flex items-center gap-3 mb-4">
-                  <Users size={20} className="text-cyan-400" />
-                  <h4 className="text-lg font-semibold text-white">Impact</h4>
-                </div>
-                <p className="text-gray-300 leading-relaxed">
-                  Contributed to developing solutions aimed at reducing gender disparities in STEM fields and promoting equal opportunities for women in technology and education.
-                </p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
