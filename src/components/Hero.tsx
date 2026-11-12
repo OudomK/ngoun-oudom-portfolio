@@ -1,6 +1,8 @@
-import { ArrowDown, Github, Mail, ChevronRight, FileText, Phone } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Mail, ChevronRight, FileText, Phone } from 'lucide-react';
 import ProfilePic from '../image/oudom.png';
-import CVfile from '../image/Oudom_Ngoun_CV.pdf';
+
+const CVfile = '/documents/Oudom_Ngoun_CV.pdf';
+
 const Hero = () => {
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -42,7 +44,7 @@ const Hero = () => {
             </h2>
 
             <p className="text-lg sm:text-xl text-cyan-400 mb-6 font-medium">
-              Backend Engineer | Project Manager
+              Backend Engineer
             </p>
 
             <p className="text-base sm:text-lg text-gray-400 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
@@ -79,12 +81,22 @@ const Hero = () => {
                 <Github size={20} />
                 GitHub
               </a>
+
+              <a
+                href="https://www.linkedin.com/in/oudom-ngoun-975585300/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 bg-gray-800 hover:bg-gray-700 border border-gray-600 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 text-white"
+              >
+                <Linkedin size={20} />
+                LinkedIn
+              </a>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center text-gray-400 text-sm sm:text-base">
               <a href="tel:+855962089546" className="flex items-center gap-2 hover:text-blue-400 transition-colors">
-                <Phone size={16} /> {/* Swapped to Phone icon for the number */}
-                096 208 9546 / 097 985 8952
+                <Phone size={16} />
+                +855 96 208 9546
               </a>
               <span className="hidden sm:block text-gray-600">•</span>
               <a href="mailto:keooudom189@gmail.com" className="flex items-center gap-2 hover:text-blue-400 transition-colors">
@@ -99,7 +111,7 @@ const Hero = () => {
             <div className="relative w-64 sm:w-80 md:w-96 z-10">
               <img 
                 src={ProfilePic}
-                alt="Oudom Ngoun" 
+                alt="Portrait of Oudom Ngoun, Full-Stack Software Developer"
                 className="w-full h-auto"
                 // Fallback if image is missing
                 onError={(e) => {

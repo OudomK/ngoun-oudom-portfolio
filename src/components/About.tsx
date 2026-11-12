@@ -1,4 +1,4 @@
-import { GraduationCap, BookOpen } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
 import NortonLogo from '../image/norton.png';
 
 const About = () => {
@@ -49,7 +49,7 @@ const About = () => {
             <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 shadow-xl hover:shadow-blue-500/10 transition-all duration-300">
               <div className="flex items-start gap-4 mb-6">
                 <div className="w-14 h-14 shrink-0 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center p-0.5 overflow-hidden shadow-lg">
-                  <img src={NortonLogo} alt="Norton University" className="w-full h-full object-cover rounded-md bg-white" />
+                  <img src={NortonLogo} alt="Norton University logo" className="w-full h-full object-cover rounded-md bg-white" />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-white mb-1">Norton University</h3>

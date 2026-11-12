@@ -10,6 +10,7 @@ const Experience = () => {
       location: 'Phnom Penh',
       brandColor: '#3B82F6',
       logo: ItsRokSrea,
+      logoAlt: 'ItsRokSrea company logo',
       current: false,
       description: [
         'Architected and developed scalable web applications, writing clean, maintainable code for both dynamic frontend interfaces and robust backend APIs.',
@@ -54,7 +55,7 @@ const Experience = () => {
                   >
                     <img
                       src={exp.logo}
-                      alt={exp.title}
+                      alt={exp.logoAlt}
                       className="w-full h-full object-contain rounded-lg"
                       onError={(e) => {
                         e.currentTarget.style.display = 'none';
@@ -81,7 +82,7 @@ const Experience = () => {
                       <div className="w-12 h-12 rounded-xl overflow-hidden bg-white p-1 md:hidden flex-shrink-0 shadow-md">
                         <img
                           src={exp.logo}
-                          alt={exp.title}
+                          alt={exp.logoAlt}
                           className="w-full h-full object-contain rounded-lg"
                           onError={(e) => {
                             e.currentTarget.style.display = 'none';

@@ -6,9 +6,10 @@ import C from '../image/c++.jpg';
 import Frontend from '../image/frontend.jpg';
 import Backend from '../image/backend.jpg';
 import BackendEngineer from '../image/anb.jpg';
-import IntroCyber from '../image/Introduction_to_Cybersecurity_certificate_keooudom189-gmail-com_c544ade2-8ba6-440c-897f-5708fe51192d.pdf';
-import CyberEssentials from '../image/certificate-completion.pdf';
 import CiscoLogo from '../image/cisco.png';
+
+const IntroCyber = '/documents/introduction-to-cybersecurity-certificate.pdf';
+const CyberEssentials = '/documents/certificate-completion.pdf';
 
 const Certificates = () => {
   // Short courses (typically brief, focused certifications)
@@ -121,7 +122,7 @@ const Certificates = () => {
               <div className={`w-14 h-14 bg-gradient-to-br ${course.color} rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg overflow-hidden`}
                 >
                 {course.logo ? (
-                  <img src={course.logo} alt={course.issuer} className="w-full h-full object-cover rounded-xl" />
+                  <img src={course.logo} alt={`${course.issuer} logo`} className="w-full h-full object-cover rounded-xl" />
                 ) : (
                   <span className="text-white font-bold text-xs leading-none text-center px-1">E&amp;T</span>
                 )}
@@ -163,7 +164,7 @@ const Certificates = () => {
               <div className={`w-14 h-14 bg-gradient-to-br ${course.color} rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg overflow-hidden`}
                 >
                 {course.logo ? (
-                  <img src={course.logo} alt={course.issuer} className="w-full h-full object-cover rounded-xl" />
+                  <img src={course.logo} alt={`${course.issuer} logo`} className="w-full h-full object-cover rounded-xl" />
                 ) : (
                   <span className="text-white font-bold text-xs leading-none text-center px-1">S</span>
                 )}
@@ -203,7 +204,7 @@ const Certificates = () => {
               <div className={`w-14 h-14 bg-gradient-to-br ${course.color} rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg overflow-hidden`}
                 >
                 {course.logo ? (
-                  <img src={course.logo} alt={course.issuer} className="w-full h-full object-cover rounded-xl" />
+                  <img src={course.logo} alt={`${course.issuer} logo`} className="w-full h-full object-cover rounded-xl" />
                 ) : (
                   <span className="text-white font-bold text-xs leading-none text-center px-1">NC</span>
                 )}

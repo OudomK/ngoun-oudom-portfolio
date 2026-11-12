@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { Github, Send, Linkedin, MessageCircle, CheckCircle2, X } from 'lucide-react';
 
+// Paste your Formspree Form ID here (from https://formspree.io → your form → "Integration").
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -26,39 +29,24 @@ const Contact = () => {
     setError('');
 
     try {
-      // Use import.meta.env for Vite environment variables
-      const botToken = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
-      const chatId = import.meta.env.VITE_TELEGRAM_CHAT_ID;
-
-      if (!botToken || !chatId) {
-        throw new Error('Telegram credentials are not configured. Please contact me directly via social links.');
+      if (FORMSPREE_ENDPOINT.includes('YOUR_FORM_ID')) {
+        throw new Error('The contact form is not configured yet. Please contact me directly via the links on this page.');
       }
 
-      const currentDate = new Date().toLocaleString('en-US', {
-        timeZone: 'Asia/Phnom_Penh', 
-        dateStyle: 'medium', 
-        timeStyle: 'short'
-      });
-
-      const cleanPhone = formData.phone.replace(/[^0-9+]/g, ''); // keep only numbers and +
-      const telegramLink = cleanPhone ? `[Chat on Telegram](https://t.me/${cleanPhone.startsWith('0') ? '+855' + cleanPhone.slice(1) : cleanPhone})` : 'No phone provided';
-
-      const text = `🚀 *New Job Opportunity!*\nSomeone reached out from your portfolio.\n\n👤 *Name:* ${formData.name}\n📧 *Email:* [${formData.email}](mailto:${formData.email})\n📱 *Phone:* ${formData.phone}\n💬 *Telegram:* ${telegramLink}\n🕒 *Date:* ${currentDate}\n\n📝 *Message:*\n_${formData.message}_`;
-
-      const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          Accept: 'application/json',
         },
         body: JSON.stringify({
-          chat_id: chatId,
-          text: text,
-          parse_mode: 'Markdown',
+          ...formData,
+          _subject: `New portfolio message from ${formData.name}`,
         }),
       });
 
       if (!response.ok) {
-        throw new Error('Failed to send message.');
+        throw new Error('Failed to send message. Please try again or contact me directly.');
       }
 
       setShowModal(true);
@@ -66,8 +54,8 @@ const Contact = () => {
       setTimeout(() => {
         setShowModal(false);
       }, 4000);
-    } catch (err: any) {
-      setError(err.message || 'Something went wrong. Please try again later.');
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : 'Something went wrong. Please try again later.');
     } finally {
       setIsSubmitting(false);
     }
@@ -77,7 +65,7 @@ const Contact = () => {
     {
       icon: Github,
       label: 'GitHub',
-      href: 'https://github.com/oudomweb?tab=repositories',
+      href: 'https://github.com/OudomK?tab=repositories',
       color: 'hover:bg-gray-700',
     },
     {

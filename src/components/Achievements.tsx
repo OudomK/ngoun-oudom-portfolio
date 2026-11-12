@@ -1,4 +1,4 @@
-import { Trophy, Lightbulb, Users, Target, ExternalLink } from 'lucide-react';
+import { Lightbulb, Users, Target, ExternalLink } from 'lucide-react';
 import Apsara from '../image/odc.jpg';
 import ApsaraLogo from '../image/odc.png'; // rename your logo file to apsara.png
 
@@ -50,7 +50,7 @@ const Achievements = () => {
                   {achievement.logo ? (
                     <img
                       src={achievement.logo}
-                      alt={achievement.title}
+                      alt={`${achievement.title} logo`}
                       className="w-full h-full object-contain rounded-lg"
                     />
                   ) : (

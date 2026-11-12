@@ -15,12 +15,12 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: Github,
-      href: 'https://github.com/oudomweb',
+      href: 'https://github.com/OudomK',
       label: 'GitHub',
     },
     {
       icon: Linkedin,
-      href: '#',
+      href: 'https://www.linkedin.com/in/oudom-ngoun-975585300/',
       label: 'LinkedIn',
     },
     {
